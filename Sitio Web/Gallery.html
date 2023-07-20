@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html  lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Diseño responsivo-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Gallery</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+
+    <link href="css/gallery.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Barra de Navegación -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="Portada.html">
+                  <img src="logo1.png">
+              </a>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li>
+                    <a href="Gallery.html"><b>Galería</b></a>
+                </li>
+                <li>
+                    <a href="FAQ.html"><b>FAQ</b></a>
+                </li>
+                <li>
+                    <a href="Download.html"><b>Descarga</b></a>
+                </li>
+                <li>
+                    <a href="Leaderboard.html"><b>Ranking</b></a>
+                 </li>
+              </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+  </nav>
+
+
+  <div class="container" id="gallery">
+     <h2 class="text-center">Galería</h2>
+     <div class="lightbox-gallery">
+         <div><img src="imagen1.png" data-image-hd="imagen1.png" alt="Imagen 1."></div>
+         <div><img src="imagen2.png" data-image-hd="imagen2.png" alt="Imagen 2."></div>
+         <div><img src="imagen3.png" data-image-hd="imagen3.png" alt="Imagen 3."></div>
+         <div><img src="imagen4.png" data-image-hd="imagen4.png" alt="Imagen 4."></div>
+         <div><img src="imagen5.png" data-image-hd="imagen5.png" alt="Imagen 5."></div>
+         <div><img src="imagen6.png" data-image-hd="imagen6.png" alt="Imagen 6."></div>
+         <div><img src="imagen7.png" data-image-hd="imagen7.png" alt="Imagen 7."></div>
+         <div><img src="imagen8.png" data-image-hd="imagen8.png" alt="Imagen 8."></div>
+         <div><img src="imagen9.png" data-image-hd="imagen9.png" alt="Imagen 9."></div>
+     </div>
+   </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<script>
+// Create a lightbox
+(function() {
+  var $lightbox = $("<div class='lightbox'></div>");
+  var $img = $("<img>");
+  var $caption = $("<p class='caption'></p>");
+
+  // Add image and caption to lightbox
+
+  $lightbox
+    .append($img)
+    .append($caption);
+
+  // Add lighbox to document
+
+  $('body').append($lightbox);
+
+  $('.lightbox-gallery img').click(function(e) {
+    e.preventDefault();
+
+    // Get image link and description
+    var src = $(this).attr("data-image-hd");
+    var cap = $(this).attr("alt");
+
+    // Add data to lighbox
+
+    $img.attr('src', src);
+    $caption.text(cap);
+
+    // Show lightbox
+
+    $lightbox.fadeIn('fast');
+
+    $lightbox.click(function() {
+      $lightbox.fadeOut('fast');
+    });
+  });
+
+}());
+</script>
+</html>

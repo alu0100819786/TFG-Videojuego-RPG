@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap');
+
+body {
+    padding-top: 70px; /* Sangría para la barra de navegación */
+    background-image: url('https://i.postimg.cc/tggDgpLd/tfg-gabi.png');
+    background-size: 1920px 1080px;
+    color: #FFFFFF;
+}
+
+
+.navbar-fixed-top .nav {
+    padding: 15px 0;
+}
+
+.navbar-fixed-top .navbar-brand {
+    padding: 0 15px;
+}
+
+footer {
+    padding: 30px 0;
+}
+
+@media(min-width:768px) {
+    body {
+        padding-top: 100px;
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        padding: 15px 0;
+    }
+}
+
+#caracteristicas{
+  position: relative;
+  margin:auto;
+  text-align: center;
+}
+
+#faq{
+  position: relative;
+  margin:auto;
+  text-align: center;
+}
+
+#intro{
+  width: 70%;
+  position: relative;
+  margin:auto;
+  text-align: center;
+}
+
+#botonportada{
+  background-color: #f55353;
+  position: relative;
+  width:80%;
+}
+
+#imagenes{
+  margin-top: 30px;
+  position: relative;
+  text-align: center;
+}
+
+#imagen1{
+  width: 350px;
+  height: 200px;
+}
+
+#imagen2{
+  width: 350px;
+  height: 200px;
+}
+
+#imagen3{
+  width: 350px;
+  height: 200px;
+}
+
+h2 {
+  font-family: 'Lugrasimo', cursive;
+  color: #FFB200;
+}
+
+li {
+  font-family: 'Lugrasimo', cursive;
+  color: #FFB200;
+}
+
+h1 {
+  font-family: 'Lugrasimo', cursive;
+  color: #FFB200;
+}
+
+p {
+  font-family: 'Lugrasimo', cursive;
+  color: #FFB200;
+}
+
+a {
+  font-family: 'Lugrasimo', cursive;
+}
